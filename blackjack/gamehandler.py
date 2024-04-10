@@ -31,8 +31,8 @@ class GameHandler:
             ranks = [card.split('|')[0] for card in playerhand]
             for i in ranks:
                 if i == 'A':
-                    c = int(input('Enter 1 for Ace to be 1, or 11 for Ace to be 11: '))
-                    count+=c
+                    # c = int(input('Enter 1 for Ace to be 1, or 11 for Ace to be 11: '))
+                    count+=11
                 elif i == 'K' or i == 'Q' or i == 'J':
                     count+= 10
                 else:
@@ -41,11 +41,10 @@ class GameHandler:
         else:
             return 0
     
-    def print_deck(self,deck):
-        string = ''
-        for i in deck:
-            string+= '[' + i + '] '
-        print('Your hand',string)
+    def print_deck(self, playerhand):
+        for i in playerhand:
+            print('[' + i + '] ')
+        print()
         
             
         

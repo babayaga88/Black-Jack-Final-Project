@@ -1,5 +1,7 @@
 from backend import jsonfilehandler
 from blackjack import gamehandler
+import matplotlib.pyplot as plt 
+import numpy as np
 
 jsonHandler = jsonfilehandler.JsonFileHandler()
 gameHandler = gamehandler.GameHandler()
@@ -12,8 +14,4 @@ def user_account_interface():
     user_password = input('Create a password: ')
     jsonHandler.add_json(user_id,user_name,user_email,user_password,0,0,0,0)
     
-    
-    
-    
-
     
