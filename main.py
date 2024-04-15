@@ -3,12 +3,12 @@
 # Final Project
 # 4/15/24
 """
-Dealer logic - stops at 17 or higher ___/10
-player logic randomly picks hit or stand and tracks result ___/10
-displays results for EACH starting value, Win/Loss/Draw count for hit and stand ___/10
-Simulator runs 100,000 times to calculate all the results ___/10
-Presentation and documentation ___/10
-Total ____/50
+Dealer logic - stops at 17 or higher _10__/10
+player logic randomly picks hit or stand and tracks result _10__/10
+displays results for EACH starting value, Win/Loss/Draw count for hit and stand _10__/10
+Simulator runs 100,000 times to calculate all the results _10__/10
+Presentation and documentation _10__/10
+Total _50___/50
 """
 # import both json and random built in packages 
 import random
@@ -52,7 +52,7 @@ def total_hand(hand):
     >>> hand = ['A','A',5]
     >>> x = total(hand)
     >>> print(x)
-    7
+    17
     """
     if isinstance(hand,list):
         count = 0
@@ -65,6 +65,9 @@ def total_hand(hand):
                 count+=10
             else:
                 count+= int(i)
+        if len(hand) == 2:
+            if hand[0] == 'A' and hand[1] == 'A':
+                return count
         while count > 21 and ace_count > 0:
             count -= 10
             ace_count -= 1
@@ -225,6 +228,18 @@ def reset(player_hand, dealer_hand, deck):
     dealerHand (list): Is a list that contains only the dealers hand. The player will not be able to access this list.
     deck (list): Is a list that contains the main deck, that the player, and dealer will draw from.
     
+    How does it work?:
+    Check the instance of all the parameters.
+    If player hand, dealer hand, and deck are not list type, then raise an ValueError in the console.
+    Clear player_hand so that the player can start with a new hand that is empty.
+    Clear the dealer_hand so that the dealer can start with a new hand that is empty.
+    Clear the deck so that all 52 cards can be added back.
+    Add all the cards back to the deck, by using the append method for deck list.
+    Shuffle the new deck, by using the random.shuffle method.
+    Have the dealer, and player draw 2 cards each. 
+    This is done by popping the main deck, then store it in a variable.
+    Once popped then append the cards to either, player hand, or dealer hand.
+    
     Returns:
     None
     
@@ -300,8 +315,8 @@ def reset(player_hand, dealer_hand, deck):
         D = deck.pop()
         # It appends A, B to the players hand, and C, D to the dealer hand, to represent both the player and dealer drawing cards.
         player_hand.append(A)
-        player_hand.append(B)
-        dealer_hand.append(C)
+        player_hand.append(C)
+        dealer_hand.append(B)
         dealer_hand.append(D)
     else:
         raise('See function reset()')
@@ -386,9 +401,7 @@ def main():
             # Lines 387-397
             # means the player and dealer have not gone over the 21, or made 21 mark.
             # To determine who wins, it subtracts the total value hand from 21, and which is closer to 21 is the winner. In other words which one is smaller is the winner.
-            p = 21 - player_hand_total
-            d = 21 - dealer_hand_total
-            if p < d:
+            if (21 - player_hand_total) < (21 - dealer_hand_total):
                 # This print statement is a debug that helps keep track of the current state of the game.
                 print('Player Wins!')
                 update_json(key,subkey,'wins')
@@ -398,5 +411,8 @@ def main():
                 update_json(key,subkey,'losses')
         total+=1
         
-        
+
+
+
+
 main()
