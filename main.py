@@ -383,7 +383,8 @@ def main():
             reset(player_hand, dealer_hand, deck)
             key = total_hand(player_hand)
         else:
-            # Lines 387-397 means the player and dealer have not gone over the 21, or made 21 mark.
+            # Lines 387-397
+            # means the player and dealer have not gone over the 21, or made 21 mark.
             # To determine who wins, it subtracts the total value hand from 21, and which is closer to 21 is the winner. In other words which one is smaller is the winner.
             p = 21 - player_hand_total
             d = 21 - dealer_hand_total
@@ -398,3 +399,4 @@ def main():
         total+=1
         
         
+main()
