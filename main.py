@@ -30,7 +30,7 @@ def dealer_turn(deck, dealerHand):
             print('debug [dealer has stand!]')
             return
     else:
-        raise('Input deck, and playerHand needs to be type list. Type action must be string type. See function total_hand()')
+        raise('Input deck, and playerHand needs to be type list. Type action must be string type. See function dealer_turn()')
 
 def player_turn(deck, playerHand, action):
     if isinstance(deck,list) and isinstance(playerHand,list) and isinstance(action,str):
@@ -44,56 +44,86 @@ def player_turn(deck, playerHand, action):
             print('debug [player stand!]')
             return
     else:
-        raise('Input deck, and playerHand needs to be type list. Type action must be string type. See function total_hand()')
+        raise('Input deck, and playerHand needs to be type list. Type action must be string type. See function player_turn()')
+
+def update(key,subkey,value):
+    with open('player.json','r') as read:
+        x = json.load(read)
+        if value == 'wins':
+            x[key][subkey][0]["wins"]+=1
+        elif value == 'draws':
+            x[key][subkey][0]["draws"]+=1
+        elif value == 'losses':
+            x[key][subkey][0]["losses"]+=1
+    read.close()
+    with open('player.json','w') as write:
+        json.dump(x,write,indent=4)
+    write.close()
+    
+def reset(player_hand, dealer_hand, deck, key):
+    if isinstance(deck,list) and isinstance(player_hand,list) and isinstance(dealer_hand,list) and isinstance(key,str):
+        player_hand = []
+        dealer_hand = []
+        deck = []
+        deck = ['2','3','4','5','6','7','8','9','10','J','K','Q','A'] * 4
+        random.shuffle(deck)
+        A = deck.pop()
+        B = deck.pop()
+        C = deck.pop()
+        D = deck.pop()
+        player_hand.append(A)
+        player_hand.append(B)
+        dealer_hand.append(C)
+        dealer_hand.append(D)
+        key = str(total_hand(player_hand))
+    else:
+        raise('See function reset()')
 
 def main():
+    key = ''
+    subkey = ''
     player_hand = list()
     dealer_hand = list()
-    deck = ['2','3','4','5','6','7','8','9','10','J','K','Q','A'] * 4
-    random.shuffle(deck)
+    deck = list()
     player_choice = ['hit','stand']
-    
+    reset(player_hand, dealer_hand, deck, key)
     total = 0
-    limit = 1
+    limit = 100
     while total < limit:
-        choice = random.choice(player_choice)
-        player_turn(deck,player_hand,choice)
+        subkey = random.choice(player_choice)
+        player_turn(deck,player_hand,subkey)
         dealer_turn(deck,dealer_hand)
         player_hand_total = total_hand(player_hand)
         dealer_hand_total = total_hand(dealer_hand)
         if (player_hand_total >= 21 and dealer_hand_total >= 21):
             print('Draw!')
-            pass
+            update(key,subkey,'draws')
+            reset(player_hand, dealer_hand, deck, key)
         elif player_hand_total == 21:
             print('Player Wins!')
-            pass
+            update(key,subkey,'wins')
+            reset(player_hand, dealer_hand, deck, key)
         elif dealer_hand_total == 21:
             print('Player Losses!')
-            pass
+            update(key,subkey,'losses')
+            reset(player_hand, dealer_hand, deck, key)
         elif player_hand_total > 21:
             print('Player Losses!')
-            pass
+            update(key,subkey,'losses')
+            reset(player_hand, dealer_hand, deck, key)
         elif dealer_hand_total > 21:
             print('Player Wins!')
-            pass
+            update(key,subkey,'wins')
+            reset(player_hand, dealer_hand, deck, key)
         else:
             p = 21 - player_hand_total
             d = 21 - dealer_hand_total
             if p < d:
                 print('Player Wins!')
-                pass
+                update(key,subkey,'wins')
             else:
                 print('Player Losses!')
-                pass
+                update(key,subkey,'losses')
         total+=1
         
-def update(key,subkey,value):
-    with open('player.json','r') as read:
-        x = json.load(read)
-    read.close()
-    return x
-
-def write(data):
-    with open('player.json','r') as write:
-        json.dump(data,write)
-    write.close()
+main()
