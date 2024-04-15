@@ -173,7 +173,7 @@ def update_json(key,subkey,value):
     The [0] means access the first index of the list. Inside the index will contain a set. ---> [0]
     "wins" is the value in a set, which is a list. ---> ['wins']
     
-    Here's what the database looks like:
+    Here's what the json looks like:
     '20': { <------------------------------- primary key
         'hit': [ <-------------------------- Subkey
             {
