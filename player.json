@@ -2,286 +2,286 @@
     "4": {
         "hit": [
             {
-                "wins": 0,
-                "draws": 0,
-                "losses": 0
+                "wins": 73,
+                "draws": 4,
+                "losses": 275
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 49,
                 "draws": 0,
-                "losses": 0
+                "losses": 279
             }
         ]
     },
     "5": {
         "hit": [
             {
-                "wins": 0,
-                "draws": 0,
-                "losses": 0
+                "wins": 208,
+                "draws": 2,
+                "losses": 736
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 127,
                 "draws": 0,
-                "losses": 0
+                "losses": 789
             }
         ]
     },
     "6": {
         "hit": [
             {
-                "wins": 0,
-                "draws": 0,
-                "losses": 0
+                "wins": 227,
+                "draws": 4,
+                "losses": 1002
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 158,
                 "draws": 0,
-                "losses": 0
+                "losses": 1115
             }
         ]
     },
     "7": {
         "hit": [
             {
-                "wins": 0,
-                "draws": 0,
-                "losses": 0
+                "wins": 356,
+                "draws": 16,
+                "losses": 1395
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 230,
                 "draws": 0,
-                "losses": 0
+                "losses": 1519
             }
         ]
     },
     "8": {
         "hit": [
             {
-                "wins": 0,
-                "draws": 0,
-                "losses": 0
+                "wins": 521,
+                "draws": 18,
+                "losses": 1459
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 332,
                 "draws": 0,
-                "losses": 0
+                "losses": 1589
             }
         ]
     },
     "9": {
         "hit": [
             {
-                "wins": 0,
-                "draws": 0,
-                "losses": 0
+                "wins": 706,
+                "draws": 26,
+                "losses": 1724
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 533,
                 "draws": 0,
-                "losses": 0
+                "losses": 2014
             }
         ]
     },
     "10": {
         "hit": [
             {
-                "wins": 0,
-                "draws": 0,
-                "losses": 0
+                "wins": 828,
+                "draws": 26,
+                "losses": 1701
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 582,
                 "draws": 0,
-                "losses": 0
+                "losses": 1883
             }
         ]
     },
     "11": {
         "hit": [
             {
-                "wins": 0,
-                "draws": 0,
-                "losses": 0
+                "wins": 1082,
+                "draws": 23,
+                "losses": 1636
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 448,
                 "draws": 0,
-                "losses": 0
+                "losses": 2213
             }
         ]
     },
     "12": {
         "hit": [
             {
-                "wins": 0,
-                "draws": 0,
-                "losses": 0
+                "wins": 1237,
+                "draws": 150,
+                "losses": 3683
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 889,
                 "draws": 0,
-                "losses": 0
+                "losses": 4064
             }
         ]
     },
     "13": {
         "hit": [
             {
-                "wins": 0,
-                "draws": 0,
-                "losses": 0
+                "wins": 1223,
+                "draws": 163,
+                "losses": 3803
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 1017,
                 "draws": 0,
-                "losses": 0
+                "losses": 4322
             }
         ]
     },
     "14": {
         "hit": [
             {
-                "wins": 0,
-                "draws": 0,
-                "losses": 0
+                "wins": 1109,
+                "draws": 196,
+                "losses": 3272
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 943,
                 "draws": 0,
-                "losses": 0
+                "losses": 3783
             }
         ]
     },
     "15": {
         "hit": [
             {
-                "wins": 0,
-                "draws": 0,
-                "losses": 0
+                "wins": 957,
+                "draws": 182,
+                "losses": 2941
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 986,
                 "draws": 0,
-                "losses": 0
+                "losses": 3074
             }
         ]
     },
     "16": {
         "hit": [
             {
-                "wins": 0,
-                "draws": 0,
-                "losses": 0
+                "wins": 877,
+                "draws": 182,
+                "losses": 2640
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 911,
                 "draws": 0,
-                "losses": 0
+                "losses": 2730
             }
         ]
     },
     "17": {
         "hit": [
             {
-                "wins": 0,
-                "draws": 0,
-                "losses": 0
+                "wins": 740,
+                "draws": 224,
+                "losses": 2363
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 940,
                 "draws": 0,
-                "losses": 0
+                "losses": 2324
             }
         ]
     },
     "18": {
         "hit": [
             {
-                "wins": 0,
-                "draws": 0,
-                "losses": 0
+                "wins": 581,
+                "draws": 215,
+                "losses": 2033
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 1173,
                 "draws": 0,
-                "losses": 0
+                "losses": 1640
             }
         ]
     },
     "19": {
         "hit": [
             {
-                "wins": 0,
-                "draws": 0,
-                "losses": 0
+                "wins": 442,
+                "draws": 213,
+                "losses": 1821
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 1326,
                 "draws": 0,
-                "losses": 0
+                "losses": 1105
             }
         ]
     },
     "20": {
         "hit": [
             {
-                "wins": 0,
-                "draws": 0,
-                "losses": 0
+                "wins": 486,
+                "draws": 345,
+                "losses": 2918
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 2819,
                 "draws": 0,
-                "losses": 0
+                "losses": 1146
             }
         ]
     },
     "21": {
         "hit": [
             {
-                "wins": 0,
+                "wins": 971,
                 "draws": 0,
                 "losses": 0
             }
         ],
         "stand": [
             {
-                "wins": 0,
+                "wins": 933,
                 "draws": 0,
                 "losses": 0
             }
